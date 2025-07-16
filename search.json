@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Four-Categorical-Variables",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Four-Categorical-Variables",
+    "section": "",
+    "text": "Voting behavior is often influenced by demographic factors, with gender frequently playing a significant role in political preferences. Using data from the 1992 American National Election Studies (ANES), which surveyed thousands of U.S. voters, we examine how men and women differed in their support for Clinton, Bush, and Perot.We model voter preference as a multinomial function of sex, comparing the likelihood of voting for Clinton, Bush, or Perot based on gender differences.We estimate that the average customer satisfaction score increased by 12.4 points following the intervention, with a 95% confidence interval ranging from 9.7 to 15.1 points, indicating a statistically significant improvement.\n\\[ Y \\sim \\text{Mutinomial}(\\rho_{bush}, \\rho_{clinton}, \\rho_{perot}) \\]\n\\[ \\begin{aligned}\n\\rho_{clinton} &=& \\frac{e^{\\beta_{0, clinton} + \\beta_{1, clinton} male}}{1 + e^{\\beta_{0, clinton} + \\beta_{1, clinton} male}}\\\\\n\\rho_{perot} &=& \\frac{e^{\\beta_{0, perot} + \\beta_{1, perot} male}}{1 + e^{\\beta_{0, perot} + \\beta_{1, perot} male}}\\\\\n\\rho_{bush}  &=& 1 - \\rho_{clinton} - \\rho_{perot}\n\\end{aligned} \\]\n\\[ \\begin{aligned}\n\\hat{\\rho}_{clinton} &=& \\frac{e^{0.45 - 0.25 male}}{1 + e^{0.45 - 0.25 male}}\\\\\n\\hat{\\rho}_{perot} &=& \\frac{e^{-0.85 + 0.42 male}}{1 + e^{-0.85 + 0.42 male}}\\\\\n\\hat{\\rho}_{bush}  &=& 1 - \\hat{\\rho}_{clinton} - \\hat{\\rho}_{perot}\n\\end{aligned} \\]\n\n\nExtracting {parsnip} model fit with `tbl_regression(x = x$fit, ...)`\n\n\nℹ Multinomial models have a different underlying structure than the models\n  gtsummary was designed for.\n• Functions designed to work with `tbl_regression()` objects may yield\n  unexpected results.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nlog(OR)\n95% CI\np-value\n\n\n\n\nClinton\n\n\nsex\n\n\n\n\n\n\n\n\n    Female\n—\n—\n\n\n\n\n    Male\n-0.26\n-0.47, -0.04\n0.021\n\n\nPerot\n\n\nsex\n\n\n\n\n\n\n\n\n    Female\n—\n—\n\n\n\n\n    Male\n0.42\n0.14, 0.70\n0.004\n\n\n\nAbbreviations: CI = Confidence Interval, OR = Odds Ratio"
+  }
+]
